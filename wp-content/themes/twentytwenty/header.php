@@ -11,7 +11,7 @@
 
 ?><!DOCTYPE html>
 
-<html class="no-js" <?php language_attributes(); ?>>
+<html style="background: red;" class="no-js" <?php language_attributes(); ?>>
 
 	<head>
 
