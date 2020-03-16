@@ -25,18 +25,18 @@
 
 <header class="header" id="header">
 		<div class="header__inner" id="header__inner">
-			<div class="header__logo">
+			<a href="<?php echo home_url();?>" class="header__logo">
 				<div class="logo__img">
-					<img src="assets/images/header/logo.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/logo.svg" alt="Logo">
 				</div>
 				<div class="logo__text">
 					<b>KOZLY.AGENCY</b><br>Lorem Ipsum T
 				</div>
-			</div>
+</a>
 			<div class="header__subscribe">
 				<div class="subscribe__text">Подпишись на рассылку</div>
 				<div class="subscribe__icon">
-					<img src="assets/images/header/mail-subscribe.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/mail-subscribe.svg" alt="">
 				</div>
 			</div>
 			<div class="header__social">

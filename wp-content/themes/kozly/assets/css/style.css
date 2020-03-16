@@ -93,6 +93,7 @@ body.active .header__logo, body.active .header__subscribe {
 
 .header__logo {
 	height: 42.8%;
+	color: #1A2734;
 	width: 100%;
 	background: #FFFFFF;
 	display: -webkit-flex;
@@ -100,7 +101,8 @@ body.active .header__logo, body.active .header__subscribe {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	text-decoration: none;
 }
 
 .logo__img {
@@ -968,8 +970,8 @@ li:before {
 	margin-top: 25px;
 	padding: 20px;
 	text-align: center;
+	height: auto;
 	width: 100%;
-	height: 60px;
 	background: #FF7246;
 	font-style: normal;
 	font-weight: bold;
