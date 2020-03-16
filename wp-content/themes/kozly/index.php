@@ -17,7 +17,7 @@ get_header();
 
 <div class="nav" id="nav">
 		<div class="nav__logo">
-			<img src="assets/images/header/logo-white.svg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/logo-white.svg" alt="">
 		</div>
 		<div class="nav__inner">
 			<div class="nav__title">KozLy<span class="orange">.</span></div>
@@ -62,7 +62,7 @@ get_header();
 
 				</div>
 				<div class="intro__photo">
-					<img src="assets/images/intro/globus-bg.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/intro/globus-bg.svg" alt="">
 				</div>
 		</div> <!-- intro -->
 	</div>
@@ -85,7 +85,7 @@ get_header();
 				<div class="case__more">
 					<a href="javascript:void(0);">
 						Подробнее
-						<img src="assets/images/icons/arrow-link.svg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-link.svg" alt="">
 					</a>
 				</div>
 			</div>
@@ -186,7 +186,7 @@ get_header();
 					<div class="form__inner">
 						<div class="form__title">Не нашли нужного?</div>
 						<div class="form__img">
-							<img src="assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
+							<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
 						</div>
 						<div class="form__item">
 							<div class="form__text">Пока Джон Траволта ищет, мы уже помогаем!</div>
@@ -221,7 +221,7 @@ get_header();
 					<div class="case__more">
 						<a href="javascript:void(0);">
 							Все наши кейсы
-							<img src="assets/images/icons/arrow-link.svg" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-link.svg" alt="">
 						</a>
 					</div>
 				</div>
@@ -232,7 +232,7 @@ get_header();
 
 			<div class="case">
 				<div class="case__images">
-					<img src="assets/images/case/image 9.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 9.jpg" alt="">
 				</div>
 				<div class="case__inner">
 					<div class="case__title">
@@ -268,13 +268,13 @@ get_header();
 					</div>
 				</div>
 				<div class="case__images">
-					<img src="assets/images/case/image 10.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 10.jpg" alt="">
 				</div>
 			</div>
 
 			<div class="case">
 				<div class="case__images">
-					<img src="assets/images/case/image 11.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 11.jpg" alt="">
 				</div>
 				<div class="case__inner">
 					<div class="case__title">
@@ -296,7 +296,7 @@ get_header();
 			<div class="case__more case__more--center">
 				<a href="javascript:void(0);">
 					Все наши кейсы
-					<img src="assets/images/icons/arrow-link.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-link.svg" alt="">
 				</a>
 			</div>
 
