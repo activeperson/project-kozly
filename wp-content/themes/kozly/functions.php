@@ -164,29 +164,52 @@ add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 function theme_name_scripts() {
 	wp_enqueue_style( 'style-name', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_script( 'animate-js-custom', get_template_directory_uri() . '/assets/js/animate.js', array(), '1.0.0', true );
+
 	wp_enqueue_script( 'script-name', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.0', true );
 }
 
 if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Настройки темы',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
+
+	$languages = array( 'ru', 'en' );
+	foreach ( $languages as $lang ) {
+	  acf_add_options_page( array(
+		'page_title' => 'Site Options (' . strtoupper( $lang ) . ')',
+		'menu_title' => __('Site Options (' . strtoupper( $lang ) . ')', 'text-domain'),
+		'menu_slug'  => "site-options-${lang}",
+		'post_id'    => $lang
+	  ) );
+	}
+
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Theme General Settings',
+	// 	'menu_title'	=> 'Настройки темы',
+	// 	'menu_slug' 	=> 'theme-general-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false
+	// ));
+ 
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Header Settings',
+	// 	'menu_title'	=> 'Шапка сайта (Header) ',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
 	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Header Settings',
-		'menu_title'	=> 'Шапка сайта (Header) ',
-		'parent_slug'	=> 'theme-general-settings',
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Footer Settings',
-		'menu_title'	=> 'Подвал сайта (Footer)',
-		'parent_slug'	=> 'theme-general-settings',
-	));
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Footer Settings',
+	// 	'menu_title'	=> 'Подвал сайта (Footer)',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
 	
 }
+add_filter('pll_get_post_types', 'fixwp_add_acf_pll', 10, 2);
+function fixwp_add_acf_pll( $post_types, $is_settings ) {
+    $post_types[] = 'acf';
+    return $post_types;
+}
+add_action('init', function() {
+	pll_register_string('subtitle', 'Текст на первом экране');
+	pll_register_string('subtitle_left_col', 'Текст в левой колонке');
+	pll_register_string('subscribe', 'Подпишись на рассылку');
+  });

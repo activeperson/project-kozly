@@ -17,12 +17,15 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class="loaderArea">
+		<div class="loader"></div>
+</div>
 <header class="header" id="header">
 		<div class="header__inner" id="header__inner">
 			<a href="<?php echo home_url();?>" class="header__logo">
@@ -30,11 +33,12 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/logo.svg" alt="Logo">
 				</div>
 				<div class="logo__text">
-					<b>KOZLY.AGENCY</b><br>Lorem Ipsum T
+					<b>KOZLY.AGENCY</b><br>
+					<?php pll_e('Текст в левой колонке'); ?>
 				</div>
 </a>
 			<div class="header__subscribe">
-				<div class="subscribe__text">Подпишись на рассылку</div>
+				<a href="#" class="subscribe__text"><?php pll_e('Подпишись на рассылку'); ?></a>
 				<div class="subscribe__icon">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/mail-subscribe.svg" alt="">
 				</div>
@@ -74,3 +78,56 @@
 		</div>
 			
 	</header>
+	<div class="nav" id="nav">
+		<div class="nav__logo">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/logo-white.svg" alt="">
+		</div>
+		<div class="nav__inner">
+			<div class="nav__title">KozLy<span class="orange">.</span></div>
+			<div class="nav__subtitle">Agency</div>
+
+			<?php 
+			
+			wp_nav_menu( [
+				'theme_location'  => '',
+				'menu'            => (pll_current_language('slug') === 'ru') ? 'RU_menu' : 'EN_menu', 
+				'container'       => 'ul', 
+				'menu_class'      => 'nav__cat', 
+				'menu_id'         => '',
+				'echo'            => true,
+				'fallback_cb'     => 'wp_page_menu',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'           => 0,
+				'walker'          => '',
+			] );
+		
+			
+			?>
+
+			<!-- <ul class="nav__cat" id="nav__cat">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="services.html">Услуги</a></li>
+				<li><a href="#contact">Контакты</a></li>
+				<li><a href="who_we_are.html">О нас</a></li>
+				<li><a href="cases.html">Кейсы</a></li>
+			</ul> -->
+		</div>
+		<div class="nav__footer">
+			<div class="nav__footeritem">
+				
+			</div>
+			<div class="nav__footeritem">
+				Презентация агенства
+			</div>
+			<div class="nav__footeritem">
+				Политика конфиденциальности
+			</div>
+			<div class="nav__footeritem">
+				<div class="btn__menu">Оставить заявку</div>
+			</div>
+		</div>
+	</div>
