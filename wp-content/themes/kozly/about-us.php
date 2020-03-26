@@ -22,19 +22,76 @@ get_header();
     <span></span>
     <span></span>
 </div>
+<style>
 
+
+.breadcrumb > span:before{
+	content: '';
+	width: 35px;
+	height: 8px;
+	display: inline-block;
+	background-image: url('<?php echo ASSETS_URI; ?>/images/icons/navi-arrow.svg');
+	margin-right: 15px;
+}
+.breadcrumb > span{
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+}
+.breadcrumb > span:not(:last-child){
+	margin-right: 15px;
+}
+.breadcrumb {
+	left: 12%;
+    position: absolute;
+    color: #ffffff;
+    z-index: 10;
+    top: 35px;
+}
+.breadcrumb span.current-item{
+	color: rgba(255,255,255, .5);
+}
+.breadcrumb a, .breadcrumb span{
+	font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+	text-decoration: none;
+}
+
+</style>
 <div class="container">
+<div class="breadcrumb">
+
+
+<?php
+	if(function_exists('bcn_display'))
+	{
+	bcn_display();
+	}
+?>
+</div>
 		<div class="intro" id="intro">
 			<div class="intro__inner">
 				<div class="case__title case__title--white">
-					Кто мы такие<span class="orange">?</span>
+				<?php the_field('zagolovok_onas', pll_current_language('slug')); ?>
 				</div>
 				<div class="case__list case__list--white">
 					<ul>
-						<li>Молодая и динамичная компания, 150+ завершенных проектов</li>
-						<li>Крупный штат профессианалов, знающих свое дело</li>
-						<li>Всего выпито 2500+ кружек зернового кофе или 102 кг</li>
-						<li>70 специалистов (планируем 100+ к конфу 2020)</li>
+
+					<?php
+						if( have_rows('spisok_pod_zagolovkom', pll_current_language('slug')) ) {
+							while ( have_rows('spisok_pod_zagolovkom', pll_current_language('slug')) ) { 
+								the_row();
+							?>
+								<li><?php the_sub_field('element_onas', pll_current_language('slug')); ?></li>
+							<?php
+							}
+						}
+					?>
 					</ul>
 				</div>
 			</div>
@@ -70,91 +127,33 @@ get_header();
 			<div class="case case--team">
 				<div class="case__inner">
 					<div class="case__subtitle">
-						О нас
+					<?php the_field('nazvanie_bloka_onas', pll_current_language('slug')); ?>
 					</div>
 					<div class="case__title">
-						<h5>Наша команда<span class="orange">.</span></h5>
+						<h5><?php the_field('zagolovok_bloka_o_nas', pll_current_language('slug')); ?><span class="orange">.</span></h5>
 					</div>
 				</div>
 				<div class="team">
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/1.jpg" alt="">
-						</div>
-						<div class="team__name">Kathryn Wilson</div>
-						<div class="team__prof">CEO</div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/2.jpg" alt="">
-						</div>
-						<div class="team__name">Shawn Miles</div>
-						<div class="team__prof">SEO-специалист</div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/3.jpg" alt="">
-						</div>
-						<div class="team__name">Guy Richards</div>
-						<div class="team__prof">Project Manager</div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/4.jpg" alt="">
-						</div>
-						<div class="team__name">Norma Pena</div>
-						<div class="team__prof">Копирайтер</div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/5.jpg" alt="">
-						</div>
-						<div class="team__name">Kathryn Wilson</div>
-						<div class="team__prof">Аналитическое мышление </div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/6.jpg" alt="">
-						</div>
-						<div class="team__name">Shawn Miles</div>
-						<div class="team__prof">SEO-специалист</div>
-					</div>
-					<div class="team__item">
-						<div class="team__img">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/7.jpg" alt="">
-						</div>
-						<div class="team__name">Guy Richards</div>
-						<div class="team__prof">Project Manager</div>
-					</div>
+				<?php
+						if( have_rows('nasha_komanda_spisok_sotrudnikov', pll_current_language('slug')) ) {
+							while ( have_rows('nasha_komanda_spisok_sotrudnikov', pll_current_language('slug')) ) { 
+								the_row();
+							?>
+								<div class="team__item">
+									<div class="team__img">
+										<img src="<?php the_sub_field('fotografiya_sotrudnika', pll_current_language('slug')); ?>" alt="">
+									</div>
+									<div class="team__name"><?php the_sub_field('imya_i_familiya_sotrudnika', pll_current_language('slug')); ?></div>
+									<div class="team__prof"><?php the_sub_field('dolzhnost_sotrudnika', pll_current_language('slug')); ?></div>
+								</div>
+
+							<?php
+							}
+						}
+					?>
 				</div>
 			</div>
 		</div>
 	</section>	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php 
-
 get_footer();

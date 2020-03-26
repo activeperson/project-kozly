@@ -97,7 +97,7 @@ get_header();
                         <?php the_field('chelovek_v_komande', pll_current_language('slug')); ?>
 						</div>
 						<div class="stat__text">
-                        <?php the_field('chelovek_v_komande-2', pll_current_language('slug')); ?>
+                        <?php the_field(' chelovek_v_komande-2', pll_current_language('slug')); ?>
 						</div>
 					</div>
 					<div class="stat__inner">
@@ -167,14 +167,15 @@ get_header();
 			<div class="services__form">
 				<form action="/" method="post">
 					<div class="form__inner">
-						<div class="form__title">Не нашли нужного?</div>
-						<div class="form__img">
-							<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
-                        </div>
+						
                         <?php  
                         
                             if(pll_current_language('slug') === 'en'){
                                 ?>
+								<div class="form__title">Did not find the right one?</div>
+								<div class="form__img">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
+								</div>
                                     <div class="form__item">
                                         <div class="form__text">While John Travolta is looking, we are already helping!</div>
                                         <div class="form__nick">How can I call you?</div>
@@ -189,6 +190,10 @@ get_header();
                             <?php
                             }else{
                                 ?>
+								<div class="form__title">Не нашли нужного?</div>
+								<div class="form__img">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
+								</div>
                                 <div class="form__item">
                                     <div class="form__text">Пока Джон Траволта ищет, мы уже помогаем!</div>
                                     <div class="form__nick">Как к вам обращаться?</div>

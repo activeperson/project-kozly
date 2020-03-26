@@ -7,6 +7,16 @@
  * @package kozly
  */
 
+
+
+// settings by VLAD
+
+
+define('ASSETS_URI', get_stylesheet_directory_uri() . "/assets");
+
+// define('CERRENT_LANG', pll_the_language());
+
+
 if ( ! function_exists( 'kozly_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
