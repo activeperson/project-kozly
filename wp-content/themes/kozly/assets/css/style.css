@@ -9,6 +9,80 @@ body {
 	color: #1A2734;
 	position: relative;
 }
+.page-template-page-services .col__item{
+	height: auto;
+}
+.page-template-page-services h5{
+	color: #000000;
+}
+.page-template-page-services .btn__menu{
+	width: auto;
+	display: inline-block;
+}
+.page-template-page-services .intro__text{
+	margin-bottom: 45px;
+}
+.page-template-page-services .col__item--center{
+	padding: 3px 0;
+}
+.page-template-front-page .case:nth-child(1) {
+	margin-bottom: 100px;
+}
+.page-template-front-page .case:nth-child(1) .case__images{
+	background: url('../images/intro-double.svg') no-repeat center;
+	background-size: contain;
+}
+.page-template-page-services .case__inner--black .case__title a, .page-template-page-services .case__inner--black .case__text, .page-template-page-services .case__inner--black .case__list ul li{
+	color: #ffffff;
+}
+.page-template-page-services .case__inner--black{
+	background: #000000;
+	position: relative;
+	z-index: 1;
+}
+.page-template-front-page .our-cases{
+	margin-top: 100px;
+}
+
+/* breadcrumb */
+
+
+.breadcrumb > span:before{
+	content: '';
+	width: 35px;
+	height: 8px;
+	display: inline-block;
+	background-image: url('../images/icons/navi-arrow.svg');
+	margin-right: 15px;
+}
+.breadcrumb > span{
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+}
+.breadcrumb > span:not(:last-child){
+	margin-right: 15px;
+}
+.breadcrumb {
+	left: 12%;
+    position: absolute;
+    color: #ffffff;
+    z-index: 10;
+    top: 35px;
+}
+.breadcrumb span.current-item{
+	color: rgba(255,255,255, .5);
+}
+.breadcrumb a, .breadcrumb span{
+	font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+	text-decoration: none;
+}
 
 body.active {
 	overflow: hidden;
@@ -131,6 +205,9 @@ body.active .header__logo, body.active .header__subscribe {
 
 .header__subscribe:hover .subscribe__text:after {
 	opacity: 1;
+}
+.grid{
+	display: flex;
 }
 .loaderArea {
     background: #000000;
@@ -562,7 +639,6 @@ body.active .nav-toggle {
 	font-weight: bold;
 	font-size: 130px;
 	line-height: 149px;
-
 	color: #FFFFFF;
 }
 
@@ -571,34 +647,32 @@ body.active .nav-toggle {
 	font-weight: 300;
 	font-size: 130px;
 	line-height: 149px;
-
 	color: #FFFFFF;
 }
-
+.intro__text p {
+	word-break: break-all;
+	white-space: normal;
+}
 .intro__text {
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 17px;
 	text-align: justify;
-
 	color: #FFFFFF;
 }
 
 .intro__photo {
+	padding: 155px 0;
 	width: 60%;
 	-ms-align-self: center;
 	align-self: center;
 }
-
 .intro__photo img {
 	display: block;
 	width: 100%;
 	height: auto;
 }
-
-
-
 /* Case */
 .case {
 	display: -webkit-flex;
@@ -608,22 +682,17 @@ body.active .nav-toggle {
 	display: flex;
 	width: 100%;
 	position: relative;
+	flex-wrap: wrap;
 }
-
 .case--team {
 	display: block;
 }
-
 .case__inner {
 	width: 50%;
 	background: #ffffff;
 	text-align: left;
 	padding: 110px;
     align-self: center;
-}
-
-.case__inner--black {
-	background: #000000;
 }
 .case__images img{
 	object-fit: cover;
@@ -636,18 +705,15 @@ body.active .nav-toggle {
 	position: relative;
 	z-index: 1;
 }
-
 .case__images:hover{
 	transform: rotate(2.45deg);
 }
-
 .case__images img{
 	max-height: 700px;
 	width: 100%;
 	position: relative;
 	z-index: 1;
 }
-
 .case__subtitle:before{
 	display: block;
 	margin: auto 8px auto 0;
@@ -656,15 +722,12 @@ body.active .nav-toggle {
 	height: 1px;
 	background: #557386;
 }
-
 .case__subtitle {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 16px;
-
 	text-transform: uppercase;
-
 	color: #557386;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -672,15 +735,12 @@ body.active .nav-toggle {
 	display: -o-flex;
 	display: flex;
 }
-
 .case__subtitle--white:before {
 	color: #ffffff;
 }
-
 .case__subtitle--white {
 	color: #ffffff;
 }
-
 .case__title {
 	margin-top: 15px;
 	font-style: normal;
@@ -693,30 +753,24 @@ body.active .nav-toggle {
 	display: -o-flex;
 	display: flex;
 }
-
 .case__title a{
 	text-decoration: none;
 	color: #000000;
 }
-
 .case__title a:hover{
 	color: #ff7246;
 	text-decoration: underline;
 }
-
 .case__title--white {
 	color: #ffffff;
 	margin-bottom: 15px;
 }
-
 .case__title--white a{
 	color: #ffffff;
 }
-
 .case__title h2, h3{
 	font-size: 60px;
 }
-
 .case__title h6 {
 	font-family: Ubuntu;
 	font-style: normal;
@@ -725,7 +779,6 @@ body.active .nav-toggle {
 	line-height: 92px;
 	margin: auto;
 }
-
 .case__new {
 	width: 61px;
 	height: 28px;
@@ -735,21 +788,16 @@ body.active .nav-toggle {
 	font-size: 16px;
 	line-height: 18px;
 	text-align: justify;
-
 	color: #000000;
 	padding: 5px 12px;
     border-radius: 11px 11px 11px 0;
 }
-
-
 .orange {
 	color: #ff7246;
 }
-
 .black {
 	color: #000000;
 }
-
 .case__text {
 	margin: 30px 0;
 	font-family: Ubuntu;
@@ -802,10 +850,11 @@ body.active .nav-toggle {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 16px;
-
 	text-align: justify;
-
 	color: #000000;
+}
+.case__list ul li{
+	margin-bottom: 8px;
 }
 
 .case__list--white ul li{
@@ -961,9 +1010,10 @@ li:before {
 }
 
 .form__inner--subscribe {
-	width: 70%;
+	width: 50%;
 	padding: 120px 110px 10px 80px;
-    margin: auto;
+	margin: auto;
+	padding-left: 0;
 }
 
 .form__title {
@@ -1202,6 +1252,9 @@ li:before {
 	display: -o-flex;
 	display: flex;
 	flex-flow: column;
+	background-image: url('../images/globus-bg.svg');
+	background-repeat: no-repeat;
+	background-position: 104% 143%;
 	padding-top: 170px;
 }
 .request__inner .form__input--ask{
@@ -1676,9 +1729,7 @@ li:before {
 	}
 
 }
-
 @media (max-width: 575px) {
-	
 	.intro {
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
@@ -1686,13 +1737,11 @@ li:before {
 		-o-flex-direction: column;
 		flex-direction: column;
 	}
-
 	.intro__inner {
 	    width: 100%;
 	    text-align: center;
 	    margin: auto;
 	}
-
 	.intro__photo {
 		width: 100%;
 	}
@@ -1704,29 +1753,23 @@ li:before {
 	.case__title {
 		font-size: 50px;
 		margin: 0;
-
 	}
 
 	.stat__count {
 		font-size: 32px;
 	}
-
 	.stat__inner {
 		margin: 25px auto;
 	}
-
 	.services__subtitle {
 		display: none;
 	}
-
 	.services__text {
 		margin-top: 40px;
 	}
-
 	.services__item {
 		margin-bottom: 32px;
 	}
-
 	.form__inner {
 		padding: 10% 7%;
 	}

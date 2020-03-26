@@ -12,9 +12,7 @@
 ?>
 
 	<footer>
-
-		<?php get_template_part('tamplate-blocks/block', 'form'); ?>
-
+		<?php get_template_part('template-blocks/block', 'form'); ?>
 		<div class="container" id="contact">
 			<div class="footer__contact">
 				<div class="contact">

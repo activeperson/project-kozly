@@ -7,73 +7,19 @@ get_header();
 
 ?>
 
-<style>
-
-    .grid{
-        display: flex;
-    }
-
-</style>
-
-<div class="grid">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-<style>
-
-
-.breadcrumb > span:before{
-	content: '';
-	width: 35px;
-	height: 8px;
-	display: inline-block;
-	background-image: url('<?php echo ASSETS_URI; ?>/images/icons/navi-arrow.svg');
-	margin-right: 15px;
-}
-.breadcrumb > span{
-	background-repeat: no-repeat;
-	background-position: center;
-	display: inline-block;
-}
-.breadcrumb > span:not(:last-child){
-	margin-right: 15px;
-}
-.breadcrumb {
-	left: 12%;
-    position: absolute;
-    color: #ffffff;
-    z-index: 10;
-    top: 35px;
-}
-.breadcrumb span.current-item{
-	color: rgba(255,255,255, .5);
-}
-.breadcrumb a, .breadcrumb span{
-	font-family: Ubuntu;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-	text-decoration: none;
-}
-
-</style>
-<div class="container">
-<div class="breadcrumb">
-
-
-<?php
-	if(function_exists('bcn_display'))
-	{
-	bcn_display();
-	}
+<?php 
+	get_template_part('template-blocks/block', 'grid');
 ?>
+
+
+
+<div class="container">
+
+
+<div class="breadcrumb">
+	<?php if(function_exists('bcn_display')) { bcn_display(); }?>
 </div>
+
 		<div class="intro" id="intro">
 			<div class="intro__inner">
 				<div class="case__title case__title--white">

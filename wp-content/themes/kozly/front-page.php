@@ -6,27 +6,11 @@ Template Name: Шаблон главной страницы
 
 
 get_header();
-
 ?>
 
-<style>
-
-    .grid{
-        display: flex;
-    }
-
-</style>
-
-<div class="grid">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
     
     <?php 
-   
+   		get_template_part('template-blocks/block', 'grid');
     ?>
     
 	<div class="container">
@@ -47,7 +31,7 @@ get_header();
 
 				</div>
 				<div class="intro__photo">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/intro/globus-bg.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/intro/main-animation.svg" alt="">
 				</div>
 		</div> <!-- intro -->
 	</div>
@@ -215,7 +199,7 @@ get_header();
 		</div>	
 	</div>
 
-	<section>
+	<section class="our-cases">
 		<div class="container">
 			<div class="case">
 				<div class="case__inner">

@@ -14,7 +14,7 @@
 
 define('ASSETS_URI', get_stylesheet_directory_uri() . "/assets");
 
-// define('CERRENT_LANG', pll_the_language());
+define('CURRENT_LANG', pll_current_language('slug'));
 
 
 if ( ! function_exists( 'kozly_setup' ) ) :
@@ -191,27 +191,6 @@ if( function_exists('acf_add_options_page') ) {
 		'post_id'    => $lang
 	  ) );
 	}
-
-	// acf_add_options_page(array(
-	// 	'page_title' 	=> 'Theme General Settings',
-	// 	'menu_title'	=> 'Настройки темы',
-	// 	'menu_slug' 	=> 'theme-general-settings',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false
-	// ));
- 
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Header Settings',
-	// 	'menu_title'	=> 'Шапка сайта (Header) ',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
-	
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Footer Settings',
-	// 	'menu_title'	=> 'Подвал сайта (Footer)',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
-	
 }
 add_filter('pll_get_post_types', 'fixwp_add_acf_pll', 10, 2);
 function fixwp_add_acf_pll( $post_types, $is_settings ) {
@@ -222,4 +201,5 @@ add_action('init', function() {
 	pll_register_string('subtitle', 'Текст на первом экране');
 	pll_register_string('subtitle_left_col', 'Текст в левой колонке');
 	pll_register_string('subscribe', 'Подпишись на рассылку');
+	pll_register_string('order', 'Заказать обратный звонок');
   });
