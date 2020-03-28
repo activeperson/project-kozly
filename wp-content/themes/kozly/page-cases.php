@@ -68,8 +68,30 @@ get_header();
 				</div>
 			</div>
 
-			<div class="case">
-				<div class="case__images">
+            <?php
+						if( have_rows('dobavlenie_kejsov', pll_current_language('slug')) ) {
+							while ( have_rows('dobavlenie_kejsov', pll_current_language('slug')) ) { 
+                                the_row();
+                                $position = get_sub_field_object('otobrazhenie_bloka_variant_sleva_sprava', pll_current_language('slug'));
+                            ?>
+                            <div class="case" style="<?php ($position['value'] === 'СПРАВА') ? print('flex-direction: row-reverse;') : ''; ?>">
+                                            
+                                <div class="case__images">
+                                        <img src="<?php the_sub_field('izobrazhenie_kejsa', pll_current_language('slug')); ?>" alt="">
+                                </div>
+                                <div class="case__inner">
+                                    <div class="case__title">
+                                        <a href="<?php the_sub_field('ssylka_na_kejs', pll_current_language('slug')); ?>"><h2><?php the_sub_field('nazvanie_kejsa', pll_current_language('slug')); ?></h2></a>
+                                    </div>
+                                    <?php the_sub_field('opisanie_kejsa', pll_current_language('slug')); ?>
+                                </div>
+                            </div>
+							<?php
+							}
+						}
+            ?>
+
+				<!-- <div class="case__images">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 9 (2).jpg" alt="">
 				</div>
 				<div class="case__inner">
@@ -87,10 +109,9 @@ get_header();
 							<li>Devepoment</li>
 						</ul>
 					</div>
-				</div>
-			</div>
+				</div> -->
 			
-			<div class="case">
+			<!-- <div class="case">
 				<div class="case__inner">
 					<div class="case__title">
 						<a href="javascript:void(0);"><h2>Maybelline New York</h2></a>
@@ -108,9 +129,9 @@ get_header();
 				<div class="case__images">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 10.jpg" alt="">
 				</div>
-			</div>
+			</div> -->
 
-			<div class="case">
+			<!-- <div class="case">
 				<div class="case__images">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 11.jpg" alt="">
 				</div>
@@ -130,9 +151,9 @@ get_header();
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="case">
+			<!-- <div class="case">
 				<div class="case__inner">
 					<div class="case__title">
 						<a href="javascript:void(0);"><h2> Lobster Belgian IPA</h2></a>
@@ -150,9 +171,9 @@ get_header();
 				<div class="case__images">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 18.jpg" alt="">
 				</div>
-			</div>
+			</div> -->
 			
-			<div class="case">
+			<!-- <div class="case">
 				<div class="case__images">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 19.jpg" alt="">
 				</div>
@@ -172,7 +193,7 @@ get_header();
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 

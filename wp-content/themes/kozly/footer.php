@@ -18,32 +18,33 @@
 				<div class="contact">
 					<div class="contact__inner">
 						<div class="case__title case__title--white">
-							<h4>Контакты<span class="black">.</span></h4>
+							<h4><?php pll_e('Контакты'); ?><span class="black">.</span></h4>
 						</div>
 						<div class="contact__subtitle">
-							Телефон:
+						<?php pll_e('Телефон'); ?>
 						</div>
 						<div class="contact__text">
-							<a href="javascript:void(0);">+ 380 99 12 34 999</a>
-							<a href="javascript:void(0);">+ 380 66 34 21 999</a>
+						<?php the_field('telefony', pll_current_language('slug')); ?>
 						</div>
 						<div class="contact__subtitle">
-							Электро-почта:
+						<?php pll_e('Электропочта'); ?>
 						</div>
 						<div class="contact__text">
 							<a href="javascript:void(0);">sale@kozly.agency</a>
 						</div>
 						<div class="contact__subtitle">
-							Адрес:
+						<?php pll_e('Адрес'); ?>
 						</div>
 						<div class="contact__text">
-							<a href="javascript:void(0);">г. Киев, Контрактовая площадь 12, офис 3</a>
+							<a href="javascript:void(0);"><?php the_field('adress', pll_current_language('slug')); ?></a>
 						</div>
 						<div class="contact__subtitle">
-							Мы в соц. сетях:
+						<?php pll_e('Мы в соц. сетях'); ?>
 						</div>
+
+
 						<div class="contact__icon">
-							<a href="javascript:void(0);">
+							<a href="<?php the_field('ssylka_na_instagram', pll_current_language('slug')); ?>">
 								<svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M13.9204 6.83594C10.2167 6.83594 7.14795 9.85181 7.14795 13.6084C7.14795 17.365 10.1638 20.3809 13.9204 20.3809C17.6771 20.3809 20.6929 17.3121 20.6929 13.6084C20.6929 9.90472 17.6241 6.83594 13.9204 6.83594ZM13.9204 17.947C11.5395 17.947 9.58181 15.9894 9.58181 13.6084C9.58181 11.2275 11.5395 9.2698 13.9204 9.2698C16.3014 9.2698 18.2591 11.2275 18.2591 13.6084C18.2591 15.9894 16.3014 17.947 13.9204 17.947Z" fill="white"/>
 								<path d="M20.9577 8.21136C21.8052 8.21136 22.4921 7.52439 22.4921 6.67697C22.4921 5.82955 21.8052 5.14258 20.9577 5.14258C20.1103 5.14258 19.4233 5.82955 19.4233 6.67697C19.4233 7.52439 20.1103 8.21136 20.9577 8.21136Z" fill="white"/>
@@ -51,13 +52,13 @@
 								</svg>
 
 							</a>
-							<a href="javascript:void(0);">
+							<a href="<?php the_field('ssylka_na_youtube', pll_current_language('slug')); ?>">
 								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M14.9823 26.1506C11.8593 26.1682 8.73622 26.1272 5.61904 25.9572C4.60536 25.8986 3.59169 25.8107 2.67177 25.3127C2.05654 24.9787 1.58193 24.5158 1.2831 23.8596C0.779193 22.7697 0.620989 21.6213 0.527239 20.4494C0.328021 18.0295 0.316302 15.6096 0.421771 13.1955C0.474505 11.9123 0.515521 10.6174 0.820208 9.35762C0.937396 8.86543 1.10732 8.38497 1.33583 7.92793C1.8749 6.85567 2.8124 6.32247 3.94326 6.09981C4.89247 5.91231 5.86513 5.91817 6.83193 5.87715C10.1073 5.74239 13.3886 5.67207 16.6698 5.70723C19.1952 5.73653 21.7265 5.80098 24.2519 5.92989C25.0311 5.9709 25.8163 5.98262 26.5604 6.25801C27.5683 6.63301 28.3183 7.26582 28.7226 8.29121C29.1151 9.27559 29.2675 10.2951 29.3495 11.3439C29.578 14.1916 29.5839 17.0393 29.3964 19.8869C29.3319 20.8479 29.2675 21.8088 29.0155 22.7522C28.4472 24.9201 27.0936 25.7697 25.1073 25.9045C22.9862 26.0451 20.8593 26.1213 18.7323 26.1506C17.4843 26.1623 16.2304 26.1506 14.9823 26.1506ZM11.9061 20.1564C14.7421 18.6037 17.5429 17.0686 20.3905 15.51C17.537 13.9455 14.7362 12.4162 11.9061 10.8635C11.9061 13.9865 11.9061 17.051 11.9061 20.1564Z" fill="white"/>
 								</svg>
 
 							</a>
-							<a href="javascript:void(0);">
+							<a href="<?php the_field('ssylka_na_facebook', pll_current_language('slug')); ?>">
 								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M21.3943 11.5033H17.3489V8.85009C17.3489 7.85367 18.0093 7.62137 18.4744 7.62137C18.9385 7.62137 21.3292 7.62137 21.3292 7.62137V3.24093L17.3975 3.22559C13.033 3.22559 12.0397 6.49266 12.0397 8.58339V11.5033H9.51562V16.0171H12.0397C12.0397 21.8099 12.0397 28.7896 12.0397 28.7896H17.3489C17.3489 28.7896 17.3489 21.7411 17.3489 16.0171H20.9313L21.3943 11.5033Z" fill="white"/>
 								</svg>
@@ -70,15 +71,26 @@
 
 							</a>
 						</div>
-						<div class="subscribe__categ subscribe__categ--footer">
-							<a class="categ" href="index.html">Главная</a>
-							<a class="categ" href="services.html">Услуги</a>
-							<a class="categ" href="#contact">Контакты</a>
-							<a class="categ" href="who_we_are.html">О нас</a>
-							<a class="categ" href="who_we_are.html">Кейсы</a>
-						</div>
+						<ul class="subscribe__categ subscribe__categ--footer">
+
+						<?php 
+			
+						wp_nav_menu( [
+							'theme_location'  => '',
+							'menu'            => (CURRENT_LANG === 'ru') ? 'RU_menu' : 'EN_menu', 
+							'container'       => 'ul', 
+							'menu_class'      => 'subscribe__categ subscribe__categ--footer', 
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => '',
+						] );
+						?>
+			</ul>
 						<div class="footer__copyrite">
-							© KozLy Studio 2010
+						<?php the_field('kopirajt', pll_current_language('slug')); ?>
 						</div>
 					</div>
 				</div>

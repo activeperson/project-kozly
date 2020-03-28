@@ -9,6 +9,29 @@ body {
 	color: #1A2734;
 	position: relative;
 }
+.error404{
+	background: #000000;
+}
+.wrapper-404 {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	justify-content: center;
+	flex-direction: column;
+}
+.wrapper-404 h3 {
+	color: #ffffff;
+	font-size: 45px;
+}
+.wrapper-404 h2{
+	font-size: 150px;
+	display: block;
+	margin-bottom: 25px;
+	color: #ffffff;
+	font-family: 'Ubuntu', sans-serif;
+	line-height: 200px;
+	text-align: center;
+}
 .page-template-page-services .col__item{
 	height: auto;
 }
@@ -39,6 +62,14 @@ body {
 	background: #000000;
 	position: relative;
 	z-index: 1;
+}
+.page-template-page-cases .case__inner p {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: justify;
+	color: #000000;
 }
 .page-template-front-page .our-cases{
 	margin-top: 100px;
@@ -1181,19 +1212,7 @@ li:before {
 	justify-content: center;
 	max-width: 750px;
 }
-
-.categ {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 15px;
-
-	text-transform: uppercase;
-
-	color: #FFFFFF;
-}
-
-.categ:after{
+.subscribe__categ ul li a:after, .subscribe__categ .categ:after{
 	display: inline-flex;
 	margin: 0 12px;
 	content: '';
@@ -1202,21 +1221,31 @@ li:before {
 	border-radius: 20px;
 	background: #FFFFFF;
 }
-
-.subscribe__categ--footer .categ {
+.subscribe__categ ul li a, .subscribe__categ .categ{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.subscribe__categ--footer ul li:before{
+	display: none;
+}
+.subscribe__categ--footer ul li a {
 	font-size: 16px;
 	font-weight: bold;
 	transition: all .3s linear;
 	cursor: pointer;
+	display: inline-block;
 }
 
-.subscribe__categ--footer .categ:hover{
+.subscribe__categ--footer ul li a:hover{
 	color: #000000;
 	text-decoration: underline;
 	transform: rotate(-7.29deg);
 }
-
-.subscribe__categ--footer .categ:after{
+.subscribe__categ--footer ul li a:after{
 	background: #000000;
 }
 
@@ -1224,7 +1253,7 @@ li:before {
 	display: none;
 }
 
-.subscribe__categ--footer .categ:last-child:after{
+.subscribe__categ--footer ul li:last-child a:after{
 	display: none;
 }
 

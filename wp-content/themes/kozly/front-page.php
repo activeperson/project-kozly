@@ -297,13 +297,15 @@ get_header();
 
 		</div>
 	</section>
-
 	<div class="container">
 		<div class="subscribe">
 			<div class="subscribe__before">
 				<div class="subscribe__black"></div>
 			</div>
 			<div class="subscribe__inner">
+
+				<?php if(CURRENT_LANG === 'ru') { ?>
+
 				<div class="case__title case__title--white">
 					<h3>Подпишись на рассылку<span class="black">.</span></h3>
 				</div>
@@ -324,6 +326,37 @@ get_header();
 						Поля отмеченные * – обязательны для заполнения. Заполняя данную форму вы соглашаетесь с правилами конфиденциальности
 					</div>
 				</form>
+
+				<?php } else{
+				?>
+
+				<div class="case__title case__title--white">
+					<h3>Sign up for the newsletter<span class="black">.</span></h3>
+				</div>
+				<div class="subscribe__categ">
+					<div class="categ">News</div>
+					<div class="categ">Digests</div>
+					<div class="categ">Marketing insights</div>
+					<div class="categ">And other</div>
+				</div>
+				<form action="/" method="post">
+					<div class="form__inner form__inner--subscribe">
+						<div class="form__nick">How can I call you?*</div>
+						<input class="form__input form__input--white" type="text" name="name" placeholder="Name">
+						<input class="form__input" type="email" name="email" placeholder="Email*">
+						<button class="form__btn form__btn--black" type="submit">Subscribe to newsletter</button>
+					</div>
+					<div class="subscribe__info">
+					Fields marked with * are required. By filling out this form you agree to the privacy policy.
+					</div>
+				</form>
+
+				<?php
+				} ?>
+
+				
+
+					
 			</div>
 		</div>
 	</div>

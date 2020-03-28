@@ -202,4 +202,10 @@ add_action('init', function() {
 	pll_register_string('subtitle_left_col', 'Текст в левой колонке');
 	pll_register_string('subscribe', 'Подпишись на рассылку');
 	pll_register_string('order', 'Заказать обратный звонок');
+
+	pll_register_string('phone', 'Телефон');
+	pll_register_string('email', 'Электропочта');
+	pll_register_string('address', 'Адрес');
+	pll_register_string('contacts', 'Контакты');
+	pll_register_string('contacts', 'Мы в соц. сетях');
   });
