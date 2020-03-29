@@ -16,9 +16,9 @@ get_header();
 <div class="container">
 
 
-<div class="breadcrumb">
-	<?php if(function_exists('bcn_display')) { bcn_display(); }?>
-</div>
+		<?php 
+			get_template_part('template-blocks/block', 'breadcrumb');
+		?>
 
 		<div class="intro" id="intro">
 			<div class="intro__inner">

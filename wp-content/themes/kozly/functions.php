@@ -208,4 +208,5 @@ add_action('init', function() {
 	pll_register_string('address', 'Адрес');
 	pll_register_string('contacts', 'Контакты');
 	pll_register_string('contacts', 'Мы в соц. сетях');
+	pll_register_string('contacts', 'Оставить заявку');
   });

@@ -6,6 +6,8 @@ Template Name: Шаблон главной страницы
 
 
 get_header();
+$urlBtnCases = get_category_link(get_field('ssylka-1_case', pll_current_language('slug')), false);
+
 ?>
 
     
@@ -13,9 +15,9 @@ get_header();
    		get_template_part('template-blocks/block', 'grid');
     ?>
     
-	<div class="container">
+	<div class="container first-screen">
 		<div class="switcher-lang">
-            <?php pll_the_languages();?> 
+            <?php pll_the_languages(); ?> 
         </div>
 		<div class="intro" id="intro">
 				<div class="intro__inner">
@@ -36,7 +38,7 @@ get_header();
 		</div> <!-- intro -->
 	</div>
 
-	<div class="container">
+	<div class="container who-we-are">
 		<div class="case">
 			<div class="case__inner">
 				<div class="case__subtitle">
@@ -81,7 +83,7 @@ get_header();
                         <?php the_field('chelovek_v_komande', pll_current_language('slug')); ?>
 						</div>
 						<div class="stat__text">
-                        <?php the_field(' chelovek_v_komande-2', pll_current_language('slug')); ?>
+                        <?php the_field('chelovek_v_komande-2', pll_current_language('slug')); ?>
 						</div>
 					</div>
 					<div class="stat__inner">
@@ -96,51 +98,50 @@ get_header();
 			</div>
 		</div>
 	</div>
-
 	<div class="container">
 		<div class="services">
 			<div class="services__inner">
 				<div class="case__subtitle case__subtitle--white">
-                <?php the_field('nazvanie_bloka-2', pll_current_language('slug')); ?>
+					<?php the_field('nazvanie_bloka-2', pll_current_language('slug')); ?>
 				</div>
 				<div class="case__title case__title--white">
-                <?php the_field('zagolovok-2', pll_current_language('slug')); ?>
+					<?php the_field('zagolovok-2', pll_current_language('slug')); ?>
 				</div>
 				<div class="services__text">
 					<div class="services__item">
-						<div class="services__title">Digital</div>
+						<a href="#" class="services__title">Digital</a>
 						<div class="services__subtitle">Стратегия</div>
 						<div class="services__subtitle">Выход в диджитал</div>
 						<div class="services__subtitle">Креативный маркетинг</div>
 					</div>
 					<div class="services__item">
-						<div class="services__title">Аудит</div>
+						<a href="#" class="services__title">Аудит</a>
 						<div class="services__subtitle">Технический SEO аудит</div>
 						<div class="services__subtitle">Аудит рекламных аккаунт PPS</div>
 						<div class="services__subtitle">Анализ конкурентов</div>
 						<div class="services__subtitle">Анализ соц. сетей</div>
 					</div>
 					<div class="services__item">
-						<div class="services__title">design</div>
+						<a href="#" class="services__title">design</a>
 						<div class="services__subtitle">Графический дизайн</div>
 						<div class="services__subtitle">Motion-design</div>
 						<div class="services__subtitle">Брендинг</div>
 					</div>
 					<div class="services__item">
-						<div class="services__title">web</div>
+						<a href="#" class="services__title">web</a>
 						<div class="services__subtitle">Лендинг</div>
 						<div class="services__subtitle">Корпоративные сайты</div>
 						<div class="services__subtitle">Порталы</div>
 						<div class="services__subtitle">Интернет-магазины</div>
 					</div>
 					<div class="services__item">
-						<div class="services__title">Smm</div>
+						<a href="#" class="services__title">Smm</a>
 						<div class="services__subtitle">Полное сопровождение</div>
 						<div class="services__subtitle">Стратегия</div>
 						<div class="services__subtitle">Поддержка</div>
 					</div>
 					<div class="services__item">
-						<div class="services__title">полиграфия</div>
+						<a href="#" class="services__title">полиграфия</a>
 						<div class="services__subtitle">Широкоформатная печать</div>
 						<div class="services__subtitle">Офсетная печать</div>
 						<div class="services__subtitle">Цифровая печать</div>
@@ -151,14 +152,12 @@ get_header();
 			<div class="services__form">
 				<form action="/" method="post">
 					<div class="form__inner">
-						
                         <?php  
-                        
-                            if(pll_current_language('slug') === 'en'){
+                            if( pll_current_language('slug') === 'en' ){
                                 ?>
 								<div class="form__title">Did not find the right one?</div>
 								<div class="form__img">
-									<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="Gif">
 								</div>
                                     <div class="form__item">
                                         <div class="form__text">While John Travolta is looking, we are already helping!</div>
@@ -170,13 +169,12 @@ get_header();
                                         <input class="form__input" type="email" name="email" placeholder="Email">
                                     </div>
                                     <button class="form__btn" type="submit">Submit</button>
-
                             <?php
-                            }else{
+                            } else {
                                 ?>
 								<div class="form__title">Не нашли нужного?</div>
 								<div class="form__img">
-									<img src="<?php echo get_template_directory_uri();?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="Gif">
 								</div>
                                 <div class="form__item">
                                     <div class="form__text">Пока Джон Траволта ищет, мы уже помогаем!</div>
@@ -190,9 +188,7 @@ get_header();
                                 <button class="form__btn" type="submit">Отправить</button>
                             <?php
                             }
-                        
                         ?>
-						
 					</div>
 				</form>
 			</div>
@@ -204,18 +200,17 @@ get_header();
 			<div class="case">
 				<div class="case__inner">
 					<div class="case__subtitle">
-						наша гордость
+						<?php the_field('nazvanie_bloka-2_case', pll_current_language('slug')); ?>
 					</div>
 					<div class="case__title">
-						<h5>Наши кейсы<span class="orange">?</span></h5>
+						<h5><?php the_field('zagolovok-2_case', pll_current_language('slug')); ?><span class="orange">?</span></h5>
 					</div>
 					<div class="case__text">
-						Ведем социальные сети брендов, разрабатываем сайты, запускаем эффективные рекламные кампании и масштабные проекты с лидерами мнений. Комбинируем все digital-инструменты, чтобы эффективно решить задачи клиента. <br>
-						Разрабатываем сайты, запускаем эффективные рекламные кампании и масштабные проекты с лидерами мнений. Комбинируем все digital-инструменты.
+						<?php the_field('opisanie_bloka_case', pll_current_language('slug')); ?>
 					</div>
 					<div class="case__more">
-						<a href="javascript:void(0);">
-							Все наши кейсы
+						<a href="<?php echo $urlBtnCases; ?>">
+						<?php the_field('tekst_na_knopke-case', pll_current_language('slug')); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-link.svg" alt="">
 						</a>
 					</div>
@@ -224,73 +219,61 @@ get_header();
 					
 				</div>
 			</div>
+							<?php  
+									$cat = get_category_by_slug((CURRENT_LANG === 'ru') ? 'cases' : 'cases_en'); 
+									$id = $cat->term_id;
+							
+									$posts = get_posts( array(
+										'numberposts' => 3,
+										'category'    => $id,
+										'orderby'     => 'date',
+										'order'       => 'DESC',
+										'include'     => array(),
+										'exclude'     => array(),
+										'post_type'   => 'post',
+										'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+									) );
+									foreach( $posts as $post ){
+										$metas = get_post_meta(  $post->ID);
+										$position = get_field_object('otobrazhenie_bloka_variant_sleva_sprava_main_page');
+										$image_attributes = wp_get_attachment_image_src( $metas['izobrazhenie_kejsa_new_version'][0], 'full' );
+										?>
 
-			<div class="case">
-				<div class="case__images">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 9.jpg" alt="">
-				</div>
-				<div class="case__inner">
-					<div class="case__title">
-						<a href="javascript:void(0);"><h2>Веселый молочник</h2></a>
-					</div>
-					<div class="case__text">
-						Ведем социальные сети брендов, разрабатываем сайты, запускаем эффективные рекламные кампании и масштабные проекты с лидерами мнений. Комбинируем все digital-инструменты, чтобы эффективно решить задачи клиента.
-					</div>
-					<div class="case__list">
-						<ul>
-							<li>Брендинг & полиграфия</li>
-							<li>Веб-дизайн</li>
-							<li>Таргетинговая реклама</li>
-							<li>Devepoment</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="case">
-				<div class="case__inner">
-					<div class="case__title">
-						<a href="javascript:void(0);"><h2>Maybelline New York</h2></a>
-					</div>
-					<div class="case__text">
-						Ведем социальные сети брендов, разрабатываем сайты, запускаем эффективные рекламные кампании и масштабные проекты с лидерами мнений. Комбинируем все digital-инструменты, чтобы эффективно решить задачи клиента.
-					</div>
-					<div class="case__list">
-						<ul>
-							<li>Брендинг & полиграфия</li>
-							<li>Веб-дизайн</li>
-						</ul>
-					</div>
-				</div>
-				<div class="case__images">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 10.jpg" alt="">
-				</div>
-			</div>
+									<div class="case" style="<?php ($position['value'] === 'СПРАВА') ? print('flex-direction: row-reverse;') : ''; ?>">
+										<div class="case__images">
+											<img src="<?php echo $image_attributes[0]; ?>" alt="<?php the_title(); ?>">
+										</div>
+										<div class="case__inner">
+											<div class="case__title">
+												<a href="<?php echo get_permalink($post->ID); ?>"><h2><?php the_title(); ?></h2></a>
+											</div>
+											<div class="case__text"><?php echo $metas['opisanie_kejsa_new'][0]; ?></div>
+											<div class="case__list">
+												<ul>
+													<?php
+														if( have_rows('punkty_pod_nazvaniem') ) {
+															while ( have_rows('punkty_pod_nazvaniem') ) { 
+																the_row();
+															?>
+																<li><?php the_sub_field('punkt'); ?></li>
+															<?php
+															}
+														}
+													?>
+												</ul>
+											</div>
+										</div>
+									</div>
+							<?php
+								}
+								wp_reset_postdata(); // сброс
+							?>
 
-			<div class="case">
-				<div class="case__images">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/case/image 11.jpg" alt="">
-				</div>
-				<div class="case__inner">
-					<div class="case__title">
-						<a href="javascript:void(0);"><h2>Мясная лавка</h2></a>
-					</div>
-					<div class="case__text">
-						Ведем социальные сети брендов, разрабатываем сайты, запускаем эффективные рекламные кампании и масштабные проекты с лидерами мнений. Комбинируем все digital-инструменты, чтобы эффективно решить задачи клиента.
-					</div>
-					<div class="case__list">
-						<ul>
-							<li>Брендинг & полиграфия</li>
-							<li>Веб-дизайн</li>
-							<li>Таргетинговая реклама</li>
-							<li>Devepoment</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+							<?php
+							?>
 			<div class="case__more case__more--center">
-				<a href="javascript:void(0);">
-					Все наши кейсы
+				<a href="<?php echo $urlBtnCases; ?>">
+				<?php the_field('tekst_na_knopke-case', pll_current_language('slug')); ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-link.svg" alt="">
 				</a>
 			</div>

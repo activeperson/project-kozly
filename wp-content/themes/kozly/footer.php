@@ -12,6 +12,9 @@
 ?>
 
 	<footer>
+		
+		<?php get_template_part('template-blocks/block', 'popupForm'); ?>
+
 		<?php get_template_part('template-blocks/block', 'form'); ?>
 		<div class="container" id="contact">
 			<div class="footer__contact">
@@ -71,7 +74,7 @@
 
 							</a>
 						</div>
-						<ul class="subscribe__categ subscribe__categ--footer">
+						<div class="subscribe__categ subscribe__categ--footer">
 
 						<?php 
 			
@@ -88,7 +91,7 @@
 							'walker'          => '',
 						] );
 						?>
-			</ul>
+			</div>
 						<div class="footer__copyrite">
 						<?php the_field('kopirajt', pll_current_language('slug')); ?>
 						</div>

@@ -38,7 +38,7 @@
 				</div>
 </a>
 			<div class="header__subscribe">
-				<a href="#" class="subscribe__text"><?php pll_e('Подпишись на рассылку'); ?></a>
+				<a href="#" id="SEND_MALLING" class="subscribe__text"><?php pll_e('Подпишись на рассылку'); ?></a>
 				<div class="subscribe__icon">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header/mail-subscribe.svg" alt="">
 				</div>
@@ -110,10 +110,10 @@
 		</div>
 		<div class="nav__footer">
 			<div class="nav__footeritem"></div>
-			<a class="nav__footeritem">Презентация агенства</a>
-			<a class="nav__footeritem">Политика конфиденциальности</a>
+			<a href="<?php the_field('ssylka_na_straniczu_menu', pll_current_language('slug')); ?>" target="_blank" class="nav__footeritem"><?php the_field('nazvanie_straniczy_menu', pll_current_language('slug')); ?></a>
+			<a href="<?php the_field('ssylka_na_straniczu_menu_2', pll_current_language('slug')); ?>" target="_blank" class="nav__footeritem"><?php the_field('nazvanie_straniczy_menu_2', pll_current_language('slug')); ?></a>
 			<div class="nav__footeritem">
-				<div class="btn__menu">Оставить заявку</div>
+				<div class="btn__menu" id="SEND_DATA"><?php pll_e('Оставить заявку'); ?></div>
 			</div>
 		</div>
 	</div>
