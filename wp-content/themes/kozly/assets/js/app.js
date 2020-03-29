@@ -1,5 +1,16 @@
 (function() {
-	
+
+	(function(){
+		$(window).on('resize load', function(){
+			if(window.innerHeight <= 850 && window.innerWidth >= 991){
+				$('header').addClass('resize');
+			} else {
+				$('header').removeClass('resize');
+			}
+		})
+	})();
+
+
 	function openModal(){
 		document.body.classList.remove('active');
 		document.body.classList.add('open-modal');

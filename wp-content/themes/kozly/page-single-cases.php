@@ -198,6 +198,7 @@ var blockWithVideo = document.querySelector('.case__video-block');
 var startVideoButton = document.querySelector('.video-block__play');
 
     startVideoButton.addEventListener('click', function(){
+        blockWithVideo.style.background = 'none';
         var parentVideoBlock = this.parentNode.parentNode
         parentVideoBlock.innerHTML = '<iframe width="100%" height="768px" src="https://www.youtube.com/embed/<?php echo $metas['iframe_dlya_video'][0]; ?>?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     });
