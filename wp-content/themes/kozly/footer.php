@@ -104,8 +104,9 @@
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcJC_cNg91dJKxDBR7_GJZ1ji32QzaTIw&libraries=places&callback=initMap" async defer></script> -->
 	<!-- <script src="assets/js/app.js"></script> -->
-
+<!-- <div id="map"></div> -->
 </body>
 </html>
 

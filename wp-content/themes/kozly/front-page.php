@@ -37,7 +37,6 @@ $urlBtnCases = get_category_link(get_field('ssylka-1_case', pll_current_language
 				</div>
 		</div> <!-- intro -->
 	</div>
-
 	<div class="container who-we-are">
 		<div class="case">
 			<div class="case__inner">
@@ -150,7 +149,6 @@ $urlBtnCases = get_category_link(get_field('ssylka-1_case', pll_current_language
 				</div>
 			</div>
 			<div class="services__form">
-				<form action="/" method="post">
 					<div class="form__inner">
                         <?php  
                             if( pll_current_language('slug') === 'en' ){
@@ -172,7 +170,7 @@ $urlBtnCases = get_category_link(get_field('ssylka-1_case', pll_current_language
                             <?php
                             } else {
                                 ?>
-								<div class="form__title">Не нашли нужного?</div>
+								<!-- <div class="form__title">Не нашли нужного?</div>
 								<div class="form__img">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/gif/1deb154e6909ef309f613779011995ee.gif" alt="Gif">
 								</div>
@@ -185,12 +183,12 @@ $urlBtnCases = get_category_link(get_field('ssylka-1_case', pll_current_language
                                     <input class="form__input" type="tel" name="tel" placeholder="Контактный телефон">
                                     <input class="form__input" type="email" name="email" placeholder="Электропочта">
                                 </div>
-                                <button class="form__btn" type="submit">Отправить</button>
+                                <button class="form__btn" type="submit">Отправить</button> -->
+								<?php echo do_shortcode( '[cf7form cf7key="glavnaya-stranicza-russkaya-versiya"]' ); ?>
                             <?php
                             }
                         ?>
 					</div>
-				</form>
 			</div>
 		</div>	
 	</div>
