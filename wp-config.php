@@ -26,16 +26,16 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 define('WPLANG', 'ru_RU');
 
 define('FS_METHOD', 'direct');
-define( 'DB_NAME', 'kozly' );
+define( 'DB_NAME', 'kod01_kozly' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'kod01_kozly' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '8SN%j0g!9c' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'kod01.mysql.tools' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
